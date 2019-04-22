@@ -71,7 +71,7 @@ shuffle = () =>{
   })
   return (
   <div>
-    <Navbar gameMessage={this.state.gameMessage} score ={this.state.score} topScore ={this.state.topScore}/>
+    <Navbar textStyle={this.state.gameMessage==='Incorrect' ? "danger":"primary"}gameMessage={this.state.gameMessage} score ={this.state.score} topScore ={this.state.topScore}/>
     <Header headerMessage={this.state.headerMessage}/>  
     <div className="row justify-content-md-center mt-2">
         {images}
