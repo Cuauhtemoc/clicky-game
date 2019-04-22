@@ -2,10 +2,10 @@ import React from 'react';
 
 function Header(props){
     return (
-        <header>
+        <header className="border border-dark mx-auto bg-primary">
             <h1>Clicky Game</h1>
             <p>
-                Click on an image to start the game. If you click the game image twice you lose
+                {props.headerMessage}
             </p>
         </header>
     )
