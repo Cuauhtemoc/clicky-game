@@ -8,7 +8,7 @@ import imageData from "./imageData";
 class App extends Component {
 
 state = {
-  headerMessage: "Click on an image to start the game. If you click the game image twice you lose",
+  headerMessage: "Click on an image to start the game. If you click the same image twice, you lose",
   gameMessage: "",
   score: 0,
   topScore: 0,
@@ -44,7 +44,7 @@ reset =() =>{
     })
     return ({
       score: 0,
-      topScore: prevState.gameOver ? prevState.topScore : prevState.score,
+      topScore: prevState.topScore > prevState.score ? prevState.topScore : prevState.score,
       images: updatedImages,
       gameMessage: "Incorrect",
       gameOver: false
@@ -73,7 +73,7 @@ shuffle = () =>{
   <div>
     <Navbar gameMessage={this.state.gameMessage} score ={this.state.score} topScore ={this.state.topScore}/>
     <Header headerMessage={this.state.headerMessage}/>  
-    <div className="row mx-auto">
+    <div className="row justify-content-md-center mt-2">
         {images}
     </div>
   </div>

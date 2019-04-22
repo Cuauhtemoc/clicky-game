@@ -2,15 +2,15 @@ import React from 'react';
 
 function Navbar(props){
     return (
-        <nav className="nav bg-dark text-light">
-            <span  className="navbar-brand">
-                <p>Clicky Game </p>
+        <nav className="row nav bg-dark text-light">
+            <span  className="col-4 navbar-brand align-self-center">
+                Clicky Game
             </span>
-            <span className="navbar-text mr-2 text-danger">
-                <p>{props.gameMessage}</p>
+            <span className={`col-3 navbar-text mr-2 text-danger align-self-center`}>
+                {props.gameMessage}
             </span>
-            <span className="navbar-text">
-                <p>Score: {props.score} | Top Score: {props.topScore} </p>
+            <span className="col-4 navbar-text align-self-center”">
+                Score: {props.score} | Top Score: {props.topScore} 
             </span>
         </nav>
     )

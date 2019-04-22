@@ -5,7 +5,7 @@ function Card (props) {
     return ( 
         <div className="card">
             <img 
-                className="card-img border border-dark p-3 img-fluid " 
+                className="card-img border border-dark" 
                 alt="pokemon" 
                 src={props.src} 
                 id={props.id} 

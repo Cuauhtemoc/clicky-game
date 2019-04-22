@@ -2,11 +2,10 @@ import React from 'react';
 
 function Header(props){
     return (
-        <header className="border border-dark mx-auto bg-primary">
-            <h1>Clicky Game</h1>
-            <p>
+        <header className="row border border-dark bg-primary">
+            <h1>
                 {props.headerMessage}
-            </p>
+            </h1>
         </header>
     )
 }
